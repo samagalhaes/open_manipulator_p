@@ -44,8 +44,8 @@ def generate_launch_description():
 
         Node(
             package='open_manipulator_p_teleop',
-            node_executable='open_manipulator_p_teleop_keyboard',
-            node_name='open_manipulator_p_teleop_keyboard',
+            executable='open_manipulator_p_teleop_keyboard',
+            name='open_manipulator_p_teleop_keyboard',
             parameters=[param_dir],
             output='screen')
     ])

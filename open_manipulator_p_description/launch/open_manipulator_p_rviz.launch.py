@@ -40,8 +40,8 @@ def generate_launch_description():
     return LaunchDescription([
         Node(
             package='joint_state_publisher',
-            node_executable='joint_state_publisher',
-            node_name='joint_state_publisher',
+            executable='joint_state_publisher',
+            name='joint_state_publisher',
             arguments=[urdf_file],
             parameters=[{'use_gui': use_gui},
                         {'source_list': ['joint_states']}],
@@ -49,15 +49,15 @@ def generate_launch_description():
 
         Node(
             package='robot_state_publisher',
-            node_executable='robot_state_publisher',
-            node_name='robot_state_publisher',
+            executable='robot_state_publisher',
+            name='robot_state_publisher',
             arguments=[urdf_file],
             output='screen'),
 
         Node(
             package='rviz2',
-            node_executable='rviz2',
-            node_name='rviz2',
+            executable='rviz2',
+            name='rviz2',
             arguments=['-d', rviz_file],
             output='screen')
     ])

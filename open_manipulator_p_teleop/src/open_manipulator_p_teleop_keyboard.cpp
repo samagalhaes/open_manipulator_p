@@ -30,7 +30,7 @@ OpenManipulatorPTeleopKeyboard::OpenManipulatorPTeleopKeyboard()
   ** Initialise ROS Parameters
   ************************************************************/
   // Declare parameters that may be set on this node
-  this->declare_parameter("with_gripper");
+  this->declare_parameter<bool>("with_gripper");
 
   // Get parameter from yaml
   this->get_parameter_or<bool>("with_gripper", with_gripper_, true);

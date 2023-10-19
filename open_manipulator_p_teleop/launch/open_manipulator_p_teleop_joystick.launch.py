@@ -44,13 +44,14 @@ def generate_launch_description():
 
         Node(
             package='joy',
-            node_executable='joy_node',
-            node_name='joy_node',
+            executable='joy_node',
+            name='joy_node',
             output='screen'),
 
         Node(
             package='open_manipulator_p_teleop',
-            node_executable='open_manipulator_p_teleop_joystick',
-            node_name='open_manipulator_p_teleop_joystick',
+            executable='open_manipulator_p_teleop_joystick',
+            name='open_manipulator_p_teleop_joystick',
+            parameters=[param_dir],
             output='screen')
     ])
